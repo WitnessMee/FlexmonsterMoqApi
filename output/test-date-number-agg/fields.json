@@ -1,0 +1,34 @@
+{
+  "fields": [
+    {
+      "uniqueName": "DemandChannelName",
+      "type": "string",
+      "caption": "Demand channel",
+      "folder": "demand/Demand",
+      "isMeasure": false
+    },
+    {
+      "uniqueName": "EndDate",
+      "type": "string",
+      "caption": "Req end date",
+      "folder": "demand/Req dates",
+      "isMeasure": false
+    },
+    {
+      "uniqueName": "Quantity",
+      "type": "number",
+      "caption": "Quantity",
+      "folder": "demand/Measures",
+      "isMeasure": true,
+      "aggregations": ["sum", "average", "count", "distinctcount", "min", "max"]
+    }
+  ],
+  "aggregations": {
+    "any": ["count", "distinctcount"],
+    "date string": ["count", "distinctcount", "min", "max"],
+    "number": ["sum", "average", "count", "distinctcount", "min", "max"],
+    "string": ["count", "distinctcount", "min", "max", "squirtle"]
+  },
+  "filters": { "any": { "members": true, "query": true, "valueQuery": ["top", "bottom"] } },
+  "sorted": true
+}
