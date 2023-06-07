@@ -25,9 +25,8 @@
   ],
   "aggregations": {
     "any": ["count", "distinctcount"],
-    "date string": ["count", "distinctcount", "min", "max"],
     "number": ["sum", "average", "count", "distinctcount", "min", "max"],
-    "string": ["count", "distinctcount", "min", "max", "squirtle"]
+    "string": ["count", "distinctcount", "min", "max"]
   },
   "filters": { "any": { "members": true, "query": true, "valueQuery": ["top", "bottom"] } },
   "sorted": true

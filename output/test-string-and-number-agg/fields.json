@@ -9,7 +9,7 @@
     },
     {
       "uniqueName": "EndDate",
-      "type": "date",
+      "type": "string",
       "caption": "Req end date",
       "folder": "demand/Req dates",
       "isMeasure": false
@@ -25,7 +25,6 @@
   ],
   "aggregations": {
     "any": ["count", "distinctcount"],
-    "date": ["count", "distinctcount", "min", "max"],
     "number": ["sum", "average", "count", "distinctcount", "min", "max"],
     "string": ["count", "distinctcount", "min", "max"]
   },

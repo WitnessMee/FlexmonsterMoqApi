@@ -25,6 +25,10 @@ const handleResponse = (req, res, endpoint) => {
   });
 };
 
+app.post("/api/handshake", function (req, res) {
+  return res.json(req.body);
+});
+
 // Implementing the /api/fields route
 app.post("/api/fields", function (req, res) {
   handleResponse(req, res, "fields");
